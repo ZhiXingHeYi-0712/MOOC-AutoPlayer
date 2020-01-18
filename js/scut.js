@@ -43,13 +43,11 @@ function isVideoOver() {
 
 function jumpToNext(VideoList) {
     if (isVideoOver()) {
-        alert("over")
         currentVideoIndex = VideoList.findIndex(function (value, index, arr) {
             return value == getCurrentVideo()
         })
-        alert(currentVideoIndex)
         if (currentVideoIndex == VideoList.length) {
-            alert("功德圆满")
+            alert("Finish.")
         } else {
             window.location = VideoList[currentVideoIndex + 1]
         }
